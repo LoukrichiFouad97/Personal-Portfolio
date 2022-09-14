@@ -1,9 +1,10 @@
-import "./App.scss";
+// UI components
+import Navbar from "./components/Navbar";
 
 export default function App() {
   return (
-    <div className="App">
-      <h1>hello</h1>
+    <div className="container">
+      <Navbar />
     </div>
   );
 }

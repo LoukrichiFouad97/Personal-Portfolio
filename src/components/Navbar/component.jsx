@@ -1,16 +1,16 @@
 import React from "react";
 
-import "./style.scss";
+import NavLogo from "../../assets/logo.png"
 
 export default function NavbarUI() {
   return (
-    <header>
-      <a href="#" class="logo">
-        <img src="img/logo.png" />
+    <nav className="navbar">
+      <a href="#" class="navbar__logo">
+        <img src={NavLogo} />
       </a>
       <div class="bx bx-menu" id="menu-icon"></div>
 
-      <ul class="navbar">
+      <ul class="navbar__list">
         <li>
           <a href="#home">Home</a>
         </li>
@@ -27,6 +27,6 @@ export default function NavbarUI() {
           <a href="#contact">Contact</a>
         </li>
       </ul>
-    </header>
+    </nav>
   );
 }
