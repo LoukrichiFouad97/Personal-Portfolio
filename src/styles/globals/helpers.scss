@@ -12,3 +12,17 @@
     font-weight: 600;
   }
 }
+
+.top {
+  position: fixed;
+  bottom: 2.1rem;
+  right: 2.1rem;
+
+  i {
+    color: var(--text-color);
+    background: var(--main-color);
+    font-size: 20px;
+    padding: 10px;
+    border-radius: 0.5rem;
+  }
+}

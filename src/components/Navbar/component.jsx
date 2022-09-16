@@ -1,6 +1,6 @@
 import React from "react";
 
-import NavLogo from "../../assets/logo.png"
+import NavLogo from "../../assets/logo.png";
 
 export default function NavbarUI() {
   return (
@@ -8,6 +8,7 @@ export default function NavbarUI() {
       <a href="#" class="navbar__logo">
         <img src={NavLogo} />
       </a>
+      
       <div class="bx bx-menu" id="menu-icon"></div>
 
       <ul class="navbar__list">

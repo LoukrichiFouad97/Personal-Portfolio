@@ -7,9 +7,10 @@ import Portfolio from "./components/Portfolio";
 import ContactMe from "./components/ContactMe";
 import Footer from "./components/Footer";
 
+
 export default function App() {
   return (
-    <div className="container">
+    <div>
       <Navbar />
       <Home />
       <AboutMe />
@@ -17,6 +18,9 @@ export default function App() {
       <Portfolio />
       <ContactMe />
       <Footer />
+      <a href="#" class="top">
+        <i class="bx bx-up-arrow-alt"></i>
+      </a>
     </div>
   );
 }

@@ -1,0 +1,19 @@
+@use "../util/" as *;
+
+.container {
+  padding: 0 rem(15);
+  margin: 0 auto;
+  background-color: #f4f4f4;
+
+  @include breakpoint(small) {
+    width: rem(750);
+  }
+
+  @include breakpoint(medium) {
+    width: rem(970);
+  }
+
+  @include breakpoint(large) {
+    width: rem(1170);
+  }
+}

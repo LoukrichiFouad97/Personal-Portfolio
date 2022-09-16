@@ -35,10 +35,9 @@
         color: var(--text-color);
       }
     }
-    
   }
 
-  &__list &__list #menu-icon {
+  &__list #menu-icon {
     font-size: 36px;
     color: var(--text-color);
     z-index: 10001;
@@ -51,4 +50,8 @@
     background: var(--bg-color);
     border-bottom: 1px solid #0e1630;
   }
+}
+
+.red {
+  background-color: red;
 }

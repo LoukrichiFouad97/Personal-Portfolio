@@ -2,17 +2,17 @@ import React from "react";
 
 function ContactMeUI() {
   return (
-    <section classNameName="contact" id="contact">
-      <div className="contact-text">
+    <section className="contact" id="contact">
+      <div className="contact__text">
         <h2>Contact Me</h2>
         <h4>Let's Work Together</h4>
         <p>
           Lorem Ipsum Is Simply Dummy Text Of The Printing And Typesetting
           Industry
         </p>
-        <div className="contact-list">
+        <div className="contact__list">
           <li>
-            <a href="#">Mansoura - Dakhalia - Egyp</a>
+            <a href="#">Ain el melh - Msila - Algeria</a>
           </li>
           <li>
             <a href="#">admin@example.com</a>
@@ -21,7 +21,7 @@ function ContactMeUI() {
             <a href="#">01646895741</a>
           </li>
         </div>
-        <div className="contact-icons">
+        <div className="contact__icons">
           <a href="#">
             <i className="bx bxl-linkedin"></i>
           </a>
@@ -40,10 +40,10 @@ function ContactMeUI() {
         </div>
       </div>
 
-      <div className="contact-form">
+      <div className="contact__form">
         <form action="">
-          <input type="" placeholder="Enter Your Name" required />
-          <input type="email" placeholder="Enter Your Email" required />
+          <input type="" placeholder="John Doe" required />
+          <input type="email" placeholder="Example@mail.com" required />
           <input type="" placeholder="Enter Your Subject" />
           <textarea
             name=""
