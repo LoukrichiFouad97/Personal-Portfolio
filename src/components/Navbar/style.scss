@@ -10,7 +10,7 @@
   border-bottom: 1px solid transparent;
   transition: all 0.4s ease;
   .container {
-    padding-block: 1rem;
+    padding: 1rem 2rem;
     height: rem(80);
     display: flex;
     align-items: center;
@@ -59,7 +59,7 @@
   }
 
   // media queries
-  @media (max-width: 1023px) {
+  @include breakpoint-down(medium) {
     .nav-btn {
       visibility: visible;
       opacity: 1;
@@ -96,10 +96,5 @@
       font-size: 1.5rem;
     }
   }
-}
 
-header div,
-nav {
-  display: flex;
-  align-items: center;
 }

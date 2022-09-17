@@ -3,16 +3,27 @@ import { FaTimes, FaBars } from "react-icons/fa";
 
 import NavLogo from "../../assets/logo.png";
 
-// markup & UI
-// import NavbarUI from "./component";
 
 export default function Navbar() {
   const [menuButton, setMenuButton] = useState(false);
   const navRef = useRef();
+
   function showNavbar() {
     setMenuButton((prev) => !prev);
     navRef.current.classList.toggle("responsive_nav");
   }
+
+  function changeHeaderColor() {
+    let header = document.querySelector(".header");
+
+    if (window.scrollY > 80) {
+      header.style.backgroundColor = "#12141c";
+    } else {
+      header.style.backgroundColor = "transparent";
+    }
+  }
+
+  window.addEventListener("scroll", changeHeaderColor);
 
   return (
     <header className="header">
