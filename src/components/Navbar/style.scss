@@ -1,57 +1,105 @@
-.navbar {
+@use "../../styles/util/" as *;
+
+.header {
   position: fixed;
   right: 0;
   top: 0;
   width: 100%;
   z-index: 1000;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  background: transparent;
   color: white;
-  padding: 22px 16%;
   border-bottom: 1px solid transparent;
   transition: all 0.4s ease;
+  .container {
+    padding-block: 1rem;
+    height: rem(80);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: transparent;
+    position: relative;
+  }
 
+  //------------- Logo -------------
   &__logo img {
     width: 135px;
     height: auto;
   }
 
-  &__list {
+  .navbar {
+    height: 100%;
     display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
 
-    a {
-      color: var(--second-color);
-      font-size: var(--p-font);
-      font-weight: 600;
-      padding: 10px 25px;
-      margin: 0 2px;
+    &__item {
+      padding: 0.5rem 1rem;
       border-radius: 0.5rem;
-      transition: all 0.4s ease;
-
+      color: var(--second-color);
+      font-weight: 600;
+      font-size: 1.2rem;
       &:hover {
+        color: var(--p-font);
         background: var(--main-color);
-        color: var(--text-color);
       }
     }
   }
 
-  &__list #menu-icon {
-    font-size: 36px;
-    color: var(--text-color);
-    z-index: 10001;
+  .nav-btn {
+    padding: 5px;
     cursor: pointer;
+    background: transparent;
+    border: none;
+    outline: none;
+    color: var(--textColor);
+    visibility: hidden;
+    opacity: 0;
     display: none;
+    font-size: 1.8rem;
   }
 
-  &.sticky {
-    padding: 10px 16%;
-    background: var(--bg-color);
-    border-bottom: 1px solid #0e1630;
+  // media queries
+  @media (max-width: 1023px) {
+    .nav-btn {
+      visibility: visible;
+      opacity: 1;
+      display: block;
+    }
+    .navbar {
+      position: fixed;
+      top: 0;
+      left: 0;
+      height: 100%;
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 1.5rem;
+      transition: 0.5s;
+      transform: translateY(-100vh);
+      background-color: rgba($color: #000000, $alpha: 0.85);
+    }
+
+    .responsive_nav {
+      transform: none;
+    }
+
+    .nav-close-btn {
+      position: absolute;
+      top: 2rem;
+      right: 2rem;
+      display: block;
+    }
+
+    .navbar__item {
+      font-size: 1.5rem;
+    }
   }
 }
 
-.red {
-  background-color: red;
+header div,
+nav {
+  display: flex;
+  align-items: center;
 }
