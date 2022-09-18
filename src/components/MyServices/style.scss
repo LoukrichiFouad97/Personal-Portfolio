@@ -1,3 +1,9 @@
+.services {
+  .container {
+    background-color: transparent;
+    margin-bottom: 5rem;
+  }
+}
 .services-content {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, auto));
@@ -30,7 +36,7 @@
     &:hover {
       transform: scale(1.01) translateY(-5px);
       border-top: 5px solid var(--main-color);
-      
+
       h3 {
         color: var(--main-color);
       }

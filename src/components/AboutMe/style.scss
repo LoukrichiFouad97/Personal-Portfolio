@@ -1,8 +1,29 @@
+@use "../../styles/util/" as *;
+
+@include breakpoint-down(medium) {
+  .about .container {
+    display: flex !important;
+    flex-direction: column;
+    .about__text {
+      text-align: center;
+
+      h2 {
+        font-size: var(--small-h2-font);
+      }
+  
+    }
+  }
+}
+
 .about {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  align-items: center;
-  gap: 2rem;
+  .container {
+    background-color: transparent;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+    gap: 2rem;
+    margin-bottom: 5rem;
+  }
 
   .about__img img {
     height: auto;
