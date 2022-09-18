@@ -1,3 +1,15 @@
+@use "../../styles/util/" as *;
+
+@include breakpoint-down(medium) {
+  .portfolio .container .main-text h2 {
+    font-size: var(--small-h2-font);
+  }
+  .portfolio .container .row {
+    width: 80%;
+    margin: 0 auto;
+  }
+}
+
 .portfolio .container {
   background-color: transparent;
   margin-bottom: 5rem;

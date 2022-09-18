@@ -17,7 +17,7 @@ export default function Navbar() {
     let header = document.querySelector(".header");
 
     if (window.scrollY > 80) {
-      header.style.backgroundColor = "#12141c";
+      header.style.backgroundColor = "#020312";
     } else {
       header.style.backgroundColor = "transparent";
     }

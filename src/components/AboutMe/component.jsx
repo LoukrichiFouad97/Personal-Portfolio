@@ -3,14 +3,14 @@ import React from "react";
 import AboutImage from "../../assets/about.png";
 
 function AboutMeUI() {
-  const services = [
+  const skills = [
     "1. Problem Solving",
     "2. Creative Idea",
     "3. Search a lot",
     "4. High Quality",
   ];
 
-  const renderServices = services.map((service, index) => {
+  const renderSkills = skills.map((service, index) => {
     return (
       <div className="about-in" key={index + 1}>
         <h5>{service}</h5>
@@ -34,7 +34,7 @@ function AboutMeUI() {
             Ever Since The 1500s, When An .ac porta sem turpis quis leo. Nulla
             in feugiat elit.
           </p>
-          <div className="about-gri">{renderServices}</div>
+          <div className="about-gri">{renderSkills}</div>
           <a href="#" className="btn">
             Contact Me
           </a>
