@@ -1,7 +1,7 @@
 import React, { useRef, useState } from "react";
 import { FaTimes, FaBars } from "react-icons/fa";
 
-import NavLogo from "../../assets/logo.png";
+import NavLogo from "../../assets/logo-no-background.png";
 
 
 export default function Navbar() {

@@ -1,8 +1,27 @@
 @use "../../styles/util/" as *;
 
+@include breakpoint-down(small) {
+  .services .container .services-content .box {
+    grid-column-start: 1;
+    grid-column-end: 3;
+  }
+}
+@include breakpoint-down(large) {
+  .services .container .services-content .box:last-child {
+    grid-column-start: 1;
+    grid-column-end: 3;
+  }
+}
+
 @include breakpoint-down(medium) {
   .services .container .main-text h2 {
     font-size: var(--small-h2-font);
+  }
+
+  .services .container .services-content {
+    grid-template-columns: repeat(2, minmax(300px, auto)) !important;
+    // grid-template-rows: 500px 500px;
+    //
   }
 }
 
