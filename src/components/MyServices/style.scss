@@ -1,37 +1,16 @@
 @use "../../styles/util/" as *;
 
-@include breakpoint-down(small) {
-  .services .container .services-content .box {
-    grid-column-start: 1;
-    grid-column-end: 3;
-  }
-}
-@include breakpoint-down(large) {
-  .services .container .services-content .box:last-child {
-    grid-column-start: 1;
-    grid-column-end: 3;
-  }
-}
-
-@include breakpoint-down(medium) {
-  .services .container .main-text h2 {
-    font-size: var(--small-h2-font);
-  }
-
-  .services .container .services-content {
-    grid-template-columns: repeat(2, minmax(300px, auto)) !important;
-  }
-}
-
 .services {
   .container {
     background-color: transparent;
     margin-bottom: 5rem;
   }
 }
+
 .services-content {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, auto));
+  // grid-template-columns: repeat(auto-fit, minmax(300px, auto));
+  grid-template-columns: repeat(3, 1fr);
   align-items: center;
   text-align: center;
   gap: 2rem;
@@ -66,5 +45,29 @@
         color: var(--main-color);
       }
     }
+  }
+}
+
+// max-width: 576px
+@include breakpoint-down(extraSmall) {
+}
+
+// max-width: 1199px
+@include breakpoint-down(large) {
+  .services .container .services-content .box:last-child {
+    grid-column-start: 1;
+    grid-column-end: 3;
+  }
+}
+
+// max-width: 991px
+@include breakpoint-down(medium) {
+  .services .container .main-text h2 {
+    font-size: var(--small-h2-font);
+  }
+
+  .services .container .services-content {
+    grid-template-columns: repeat(2, minmax(300px, auto)) !important;
+    
   }
 }
